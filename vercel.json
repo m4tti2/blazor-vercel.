@@ -1,8 +1,13 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "blazor-vercel.csproj",
+      "use": "@vercel/dotnet",
+      "config": { "output": "output" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
