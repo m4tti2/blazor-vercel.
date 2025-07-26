@@ -1,7 +1,11 @@
 {
-  "version": 2,
+  "builds": [
+    {
+      "src": "Client/Client.csproj",
+      "use": "@vercel/dotnet"
+    }
+  ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
